@@ -1,0 +1,1 @@
+# WordCounter - React + Vite + Tailwind
