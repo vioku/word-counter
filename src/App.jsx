@@ -62,7 +62,7 @@ function App() {
   };
 
   const Statistic = ({ label, value }) => (
-    <div className='p-1.5 bg-blue-500/[0.5] text-blue-500 rounded-md w-full flex flex-col justify-center items-center'>
+    <div className='p-1.5 bg-blue-500/[0.1] text-blue-500 rounded-md w-full flex flex-col justify-center items-center'>
       <span className='text-3xl font-bold'>{value}</span>
       <span>{label}</span>
     </div>
@@ -78,8 +78,8 @@ function App() {
             </svg>
           </span>
           By
-          <a href='https://facebook.com/vioku.jsx' target='_blank' className='text-md font-bold text-blue-500'>
-            @Vioku
+          <a href='https://t.me/viokuJSX' target='_blank' className='text-md font-bold text-blue-500'>
+            Vioku
           </a>
         </div>
         <div className='flex flex-row justify-center items-center mt-3 gap-x-4'>
@@ -108,14 +108,14 @@ function App() {
     );
   };
   return (
-    <div className='p-4 md:max-w-[80%] mx-auto'>
+    <div className='p-4 md:max-w-[55%] mx-auto'>
       <div className='flex flex-col justify-center items-center mb-4'>
         <h2 className='text-3xl font-bold'>Word Counter</h2>
         <p>A simple & fast character counter</p>
         <Copyright />
       </div>
       <div className='grid md:grid-cols-2 sm:grid-rows-1 gap-3'>
-        <textarea onChange={handleChange} className='focus:outline-slate-300/[0.5] min-h-12 py-2 px-4 rounded-lg text-sm leading-6 bg-white border border-slate-200 w-full h-96' placeholder='Paste text here'></textarea>
+        <textarea onChange={handleChange} className='focus:outline-blue-500/[0.6] focus:outline-none focus:border-none min-h-12 py-2 px-4 rounded-lg text-sm leading-6 bg-gray-800 border border-gray-700 w-full h-96' placeholder='Paste/Type text here'></textarea>
         <div className='flex flex-col gap-y-2'>
           <div className='flex gap-x-2'>
             <Statistic label='Words' value={stats.words} />
@@ -141,7 +141,7 @@ function App() {
           <div className='flex flex-col gap-y-2'>
             {stats.wordDensity &&
               stats.wordDensity.map((word, index) => (
-                <div key={index} className='shadow-md flex gap-x-2 justify-between bg-white font-semibold rounded-md p-1 px-2'>
+                <div key={index} className='shadow-md flex gap-x-2 justify-between bg-gray-800 font-semibold rounded-md p-1 px-2'>
                   <span>{word.word}</span>
                   <span>{word.frequency}</span>
                 </div>
